@@ -48,6 +48,12 @@ class AppRouter extends _i4.RootStackRouter {
         child: const _i1.LoginScreen(),
       );
     },
+    SignUpRouter.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.SignUpScreen(),
+      );
+    },
     HomeRouter.name: (routeData) {
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -76,7 +82,12 @@ class AppRouter extends _i4.RootStackRouter {
               LoginRouter.name,
               path: '',
               parent: AuthRouter.name,
-            )
+            ),
+            _i4.RouteConfig(
+              SignUpRouter.name,
+              path: 'sign-up-screen',
+              parent: AuthRouter.name,
+            ),
           ],
         ),
         _i4.RouteConfig(
@@ -146,6 +157,18 @@ class LoginRouter extends _i4.PageRouteInfo<void> {
         );
 
   static const String name = 'LoginRouter';
+}
+
+/// generated route for
+/// [_i1.SignUpScreen]
+class SignUpRouter extends _i4.PageRouteInfo<void> {
+  const SignUpRouter()
+      : super(
+          SignUpRouter.name,
+          path: 'sign-up-screen',
+        );
+
+  static const String name = 'SignUpRouter';
 }
 
 /// generated route for

@@ -4,11 +4,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'package:expense_tracking/app_router/app_router.gr.dart';
 import 'package:expense_tracking/singleton/signleton.dart';
-import 'package:expense_tracking/themes/app_theme.dart';
 import 'package:expense_tracking/widgets/widgets.dart';
 
-class LoginScreen extends HookWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends HookWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class LoginScreen extends HookWidget {
             Padding(
               padding: EdgeInsets.symmetric(vertical: Metrics.instance.huge),
               child: Text(
-                'LOGIN',
+                'SIGN UP',
                 style: TextStyle(
                   fontSize: Metrics.instance.extraLarge,
                   fontWeight: FontWeight.w600,
@@ -49,28 +48,9 @@ class LoginScreen extends HookWidget {
             Padding(
               padding: EdgeInsets.only(top: Metrics.instance.huge),
               child: PrimaryButtonWidget(
-                title: 'LOGIN',
+                title: 'SIGN UP',
                 roundedCorner: true,
                 onPressed: () {},
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.only(top: Metrics.instance.large),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        fontSize: Metrics.instance.medium,
-                        color: AppColors.iconInActive,
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ),
             const LoginSeparatorWidget(),
@@ -86,7 +66,7 @@ class LoginScreen extends HookWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Need an account? ',
+                    'Already a user? ',
                     style: TextStyle(
                       fontSize: Metrics.instance.medium,
                     ),
@@ -96,13 +76,13 @@ class LoginScreen extends HookWidget {
                       context.navigateTo(
                         const AuthRouter(
                           children: [
-                            SignUpRouter(),
+                            LoginRouter(),
                           ],
                         ),
                       );
                     },
                     child: Text(
-                      'SIGN UP',
+                      'LOGIN',
                       style: TextStyle(
                         fontSize: Metrics.instance.medium,
                         decoration: TextDecoration.underline,

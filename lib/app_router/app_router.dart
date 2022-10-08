@@ -11,10 +11,12 @@ import 'package:expense_tracking/screens/screens.dart';
       page: StartUpScreen,
     ),
     AutoRoute(
+      // initial: true,
       page: EmptyRouterPage,
       name: 'AuthRouter', // to use this when wanna to replace route
       children: [
         AutoRoute(name: 'LoginRouter', page: LoginScreen, initial: true),
+        AutoRoute(name: 'SignUpRouter', page: SignUpScreen),
       ],
     ),
     AutoRoute(

@@ -37,36 +37,70 @@ class DashboardTab extends HookWidget {
             opacity: animation,
             child: child,
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: tabsRouter.activeIndex,
-            onTap: (index) {
-              tabsRouter.setActiveIndex(index);
-            },
-            items: const [
-              BottomNavigationBarItem(
-                label: 'Home',
-                icon: SvgIconWidget(
-                  'assets/svgs/home.svg',
-                  color: AppColors.iconInActive,
+          bottomNavigationBar: BottomAppBar(
+            shape: const CircularNotchedRectangle(),
+            notchMargin: 5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  icon: const SvgIconWidget(
+                    'assets/svgs/home.svg',
+                    color: AppColors.primary,
+                  ),
+                  onPressed: () {
+                    tabsRouter.setActiveIndex(0);
+                  },
                 ),
-                activeIcon: SvgIconWidget(
-                  'assets/svgs/home.svg',
-                  color: AppColors.primary,
+                IconButton(
+                  icon: const SvgIconWidget(
+                    'assets/svgs/setting.svg',
+                    color: AppColors.primary,
+                  ),
+                  onPressed: () {
+                    tabsRouter.setActiveIndex(1);
+                  },
                 ),
-              ),
-              BottomNavigationBarItem(
-                label: 'Setting',
-                icon: SvgIconWidget(
-                  'assets/svgs/setting.svg',
-                  color: AppColors.iconInActive,
-                ),
-                activeIcon: SvgIconWidget(
-                  'assets/svgs/setting.svg',
-                  color: AppColors.primary,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.add),
+          ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.miniCenterDocked,
+
+          // bottomNavigationBar: BottomNavigationBar(
+          //   currentIndex: tabsRouter.activeIndex,
+          //   onTap: (index) {
+          //     tabsRouter.setActiveIndex(index);
+          //   },
+          //   items: const [
+          //     BottomNavigationBarItem(
+          //       label: 'Home',
+          //       icon: SvgIconWidget(
+          //         'assets/svgs/home.svg',
+          //         color: AppColors.iconInActive,
+          //       ),
+          //       activeIcon: SvgIconWidget(
+          //         'assets/svgs/home.svg',
+          //         color: AppColors.primary,
+          //       ),
+          //     ),
+          //     BottomNavigationBarItem(
+          //       label: 'Setting',
+          //       icon: SvgIconWidget(
+          //         'assets/svgs/setting.svg',
+          //         color: AppColors.iconInActive,
+          //       ),
+          //       activeIcon: SvgIconWidget(
+          //         'assets/svgs/setting.svg',
+          //         color: AppColors.primary,
+          //       ),
+          //     ),
+          //   ],
+          // ),
         );
       },
     );

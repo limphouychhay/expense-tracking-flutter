@@ -1,6 +1,7 @@
 abstract class AppMetrics {
   double get extraHuge;
   double get huge;
+  double get extraLarge;
   double get large;
   double get medium;
   double get small;
@@ -8,6 +9,9 @@ abstract class AppMetrics {
 
   double get borderRadius;
   double get inputHeight;
+  double get buttonHeight;
+
+  double get defaultPadding;
 }
 
 class _MobileMetrics extends AppMetrics {
@@ -16,6 +20,8 @@ class _MobileMetrics extends AppMetrics {
   double get extraHuge => 64.0;
   @override
   double get huge => 32.0;
+  @override
+  double get extraLarge => 25.0;
   @override
   double get large => 16.0;
   @override
@@ -29,6 +35,11 @@ class _MobileMetrics extends AppMetrics {
   double get borderRadius => 8.0;
   @override
   double get inputHeight => 48.0;
+  @override
+  double get buttonHeight => 50.0;
+
+  @override
+  double get defaultPadding => 16.0;
 }
 
 class Metrics {
