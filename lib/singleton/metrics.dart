@@ -12,6 +12,7 @@ abstract class AppMetrics {
   double get buttonHeight;
 
   double get defaultPadding;
+  double get defaultFontSize;
 }
 
 class _MobileMetrics extends AppMetrics {
@@ -40,6 +41,8 @@ class _MobileMetrics extends AppMetrics {
 
   @override
   double get defaultPadding => 16.0;
+  @override
+  double get defaultFontSize => 14.0;
 }
 
 class Metrics {

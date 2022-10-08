@@ -76,7 +76,7 @@ class AppRouter extends _i4.RootStackRouter {
         ),
         _i4.RouteConfig(
           AuthRouter.name,
-          path: '/empty-router-page',
+          path: '/',
           children: [
             _i4.RouteConfig(
               LoginRouter.name,
@@ -92,7 +92,7 @@ class AppRouter extends _i4.RootStackRouter {
         ),
         _i4.RouteConfig(
           DashboardRouter.name,
-          path: '/',
+          path: '/dashboard-tab',
           children: [
             _i4.RouteConfig(
               HomeRouter.name,
@@ -127,7 +127,7 @@ class AuthRouter extends _i4.PageRouteInfo<void> {
   const AuthRouter({List<_i4.PageRouteInfo>? children})
       : super(
           AuthRouter.name,
-          path: '/empty-router-page',
+          path: '/',
           initialChildren: children,
         );
 
@@ -140,7 +140,7 @@ class DashboardRouter extends _i4.PageRouteInfo<void> {
   const DashboardRouter({List<_i4.PageRouteInfo>? children})
       : super(
           DashboardRouter.name,
-          path: '/',
+          path: '/dashboard-tab',
           initialChildren: children,
         );
 

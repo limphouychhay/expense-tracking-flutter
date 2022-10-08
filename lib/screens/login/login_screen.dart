@@ -51,7 +51,15 @@ class LoginScreen extends HookWidget {
               child: PrimaryButtonWidget(
                 title: 'LOGIN',
                 roundedCorner: true,
-                onPressed: () {},
+                onPressed: () {
+                  context.replaceRoute(
+                    const DashboardRouter(
+                      children: [
+                        HomeRouter(),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
             Container(

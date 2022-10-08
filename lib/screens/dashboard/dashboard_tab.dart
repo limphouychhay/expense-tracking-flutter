@@ -23,10 +23,12 @@ class DashboardTab extends HookWidget {
           if (tabsRouter.activeIndex == 0) {
             return AppBar(
               title: Text(tr('screen.home')),
+              elevation: 0,
             );
           } else {
             return AppBar(
               title: const Text('Setting'),
+              elevation: 0,
             );
           }
         }
