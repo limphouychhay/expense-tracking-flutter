@@ -38,6 +38,7 @@ class AppTheme {
         ),
         iconTheme: IconThemeData(color: Colors.black),
         centerTitle: false,
+        elevation: 0,
       ),
       textTheme: const TextTheme(
         headline1: TextStyle(

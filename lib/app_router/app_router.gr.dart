@@ -42,6 +42,12 @@ class AppRouter extends _i4.RootStackRouter {
         child: const _i3.DashboardTab(),
       );
     },
+    SettingRoute.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i2.EmptyRouterPage(),
+      );
+    },
     LoginRouter.name: (routeData) {
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -64,6 +70,12 @@ class AppRouter extends _i4.RootStackRouter {
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.SettingScreen(),
+      );
+    },
+    MyAccountRouter.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.MyAccountScreen(),
       );
     },
   };
@@ -96,7 +108,7 @@ class AppRouter extends _i4.RootStackRouter {
           children: [
             _i4.RouteConfig(
               HomeRouter.name,
-              path: 'home-screen',
+              path: '',
               parent: DashboardRouter.name,
             ),
             _i4.RouteConfig(
@@ -104,6 +116,17 @@ class AppRouter extends _i4.RootStackRouter {
               path: 'setting-screen',
               parent: DashboardRouter.name,
             ),
+          ],
+        ),
+        _i4.RouteConfig(
+          SettingRoute.name,
+          path: '/empty-router-page',
+          children: [
+            _i4.RouteConfig(
+              MyAccountRouter.name,
+              path: 'my-account-screen',
+              parent: SettingRoute.name,
+            )
           ],
         ),
       ];
@@ -148,6 +171,19 @@ class DashboardRouter extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [_i2.EmptyRouterPage]
+class SettingRoute extends _i4.PageRouteInfo<void> {
+  const SettingRoute({List<_i4.PageRouteInfo>? children})
+      : super(
+          SettingRoute.name,
+          path: '/empty-router-page',
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingRoute';
+}
+
+/// generated route for
 /// [_i1.LoginScreen]
 class LoginRouter extends _i4.PageRouteInfo<void> {
   const LoginRouter()
@@ -177,7 +213,7 @@ class HomeRouter extends _i4.PageRouteInfo<void> {
   const HomeRouter()
       : super(
           HomeRouter.name,
-          path: 'home-screen',
+          path: '',
         );
 
   static const String name = 'HomeRouter';
@@ -193,4 +229,16 @@ class SettingRouter extends _i4.PageRouteInfo<void> {
         );
 
   static const String name = 'SettingRouter';
+}
+
+/// generated route for
+/// [_i1.MyAccountScreen]
+class MyAccountRouter extends _i4.PageRouteInfo<void> {
+  const MyAccountRouter()
+      : super(
+          MyAccountRouter.name,
+          path: 'my-account-screen',
+        );
+
+  static const String name = 'MyAccountRouter';
 }

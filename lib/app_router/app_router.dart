@@ -24,8 +24,15 @@ import 'package:expense_tracking/screens/screens.dart';
       name: 'DashboardRouter',
       // initial: true,
       children: [
-        AutoRoute(name: 'HomeRouter', page: HomeScreen),
+        AutoRoute(name: 'HomeRouter', page: HomeScreen, initial: true),
         AutoRoute(name: 'SettingRouter', page: SettingScreen),
+      ],
+    ),
+    AutoRoute(
+      page: EmptyRouterPage,
+      name: 'SettingRoute',
+      children: [
+        AutoRoute(name: 'MyAccountRouter', page: MyAccountScreen),
       ],
     ),
   ],

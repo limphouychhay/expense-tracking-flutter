@@ -1,6 +1,8 @@
-import 'package:expense_tracking/singleton/signleton.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import 'package:expense_tracking/app_router/app_router.gr.dart';
+import 'package:expense_tracking/singleton/signleton.dart';
 import 'package:expense_tracking/widgets/widgets.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -17,7 +19,15 @@ class SettingScreen extends StatelessWidget {
               RowButtonWidget(
                 iconName: 'account',
                 title: 'My Account',
-                onTap: () {},
+                onTap: () {
+                  context.navigateTo(
+                    const SettingRoute(
+                      children: [
+                        MyAccountRouter(),
+                      ],
+                    ),
+                  );
+                },
               ),
               RowButtonWidget(
                 iconName: 'wallet',
