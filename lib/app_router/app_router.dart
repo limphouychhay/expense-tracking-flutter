@@ -35,6 +35,7 @@ import 'package:expense_tracking/screens/screens.dart';
         AutoRoute(name: 'MyAccountRouter', page: MyAccountScreen),
         AutoRoute(name: 'MyWalletsRouter', page: MyWalletsScreen),
         AutoRoute(name: 'CategoriesRouter', page: CategoriesScreen),
+        AutoRoute(name: 'LanguageRouter', page: LanguageScreen),
       ],
     ),
   ],

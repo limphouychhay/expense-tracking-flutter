@@ -60,8 +60,16 @@ class SettingScreen extends StatelessWidget {
         ),
         RowButtonWidget(
           iconName: 'langauge',
-          title: 'Langauge',
-          onTap: () {},
+          title: 'Language',
+          onTap: () {
+            context.navigateTo(
+              const SettingRoute(
+                children: [
+                  LanguageRouter(),
+                ],
+              ),
+            );
+          },
         ),
         RowButtonWidget(
           iconName: 'theme',

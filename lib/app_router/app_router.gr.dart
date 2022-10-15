@@ -90,6 +90,12 @@ class AppRouter extends _i4.RootStackRouter {
         child: const _i1.CategoriesScreen(),
       );
     },
+    LanguageRouter.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.LanguageScreen(),
+      );
+    },
   };
 
   @override
@@ -147,6 +153,11 @@ class AppRouter extends _i4.RootStackRouter {
             _i4.RouteConfig(
               CategoriesRouter.name,
               path: 'categories-screen',
+              parent: SettingRoute.name,
+            ),
+            _i4.RouteConfig(
+              LanguageRouter.name,
+              path: 'language-screen',
               parent: SettingRoute.name,
             ),
           ],
@@ -287,4 +298,16 @@ class CategoriesRouter extends _i4.PageRouteInfo<void> {
         );
 
   static const String name = 'CategoriesRouter';
+}
+
+/// generated route for
+/// [_i1.LanguageScreen]
+class LanguageRouter extends _i4.PageRouteInfo<void> {
+  const LanguageRouter()
+      : super(
+          LanguageRouter.name,
+          path: 'language-screen',
+        );
+
+  static const String name = 'LanguageRouter';
 }
