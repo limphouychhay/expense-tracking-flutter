@@ -33,6 +33,7 @@ import 'package:expense_tracking/screens/screens.dart';
       name: 'SettingRoute',
       children: [
         AutoRoute(name: 'MyAccountRouter', page: MyAccountScreen),
+        AutoRoute(name: 'MyWalletsRouter', page: MyWalletsScreen),
       ],
     ),
   ],

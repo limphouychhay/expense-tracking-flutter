@@ -78,6 +78,12 @@ class AppRouter extends _i4.RootStackRouter {
         child: const _i1.MyAccountScreen(),
       );
     },
+    MyWalletsRouter.name: (routeData) {
+      return _i4.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.MyWalletsScreen(),
+      );
+    },
   };
 
   @override
@@ -126,7 +132,12 @@ class AppRouter extends _i4.RootStackRouter {
               MyAccountRouter.name,
               path: 'my-account-screen',
               parent: SettingRoute.name,
-            )
+            ),
+            _i4.RouteConfig(
+              MyWalletsRouter.name,
+              path: 'my-wallets-screen',
+              parent: SettingRoute.name,
+            ),
           ],
         ),
       ];
@@ -241,4 +252,16 @@ class MyAccountRouter extends _i4.PageRouteInfo<void> {
         );
 
   static const String name = 'MyAccountRouter';
+}
+
+/// generated route for
+/// [_i1.MyWalletsScreen]
+class MyWalletsRouter extends _i4.PageRouteInfo<void> {
+  const MyWalletsRouter()
+      : super(
+          MyWalletsRouter.name,
+          path: 'my-wallets-screen',
+        );
+
+  static const String name = 'MyWalletsRouter';
 }

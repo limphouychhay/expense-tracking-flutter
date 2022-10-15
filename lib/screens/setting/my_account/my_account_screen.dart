@@ -96,7 +96,7 @@ class MyAccountScreen extends StatelessWidget {
                 child: Text(
                   'SIGN OUT',
                   style: TextStyle(
-                    fontSize: Metrics.instance.large,
+                    fontSize: Metrics.instance.medium,
                     color: AppColors.red,
                   ),
                 ),

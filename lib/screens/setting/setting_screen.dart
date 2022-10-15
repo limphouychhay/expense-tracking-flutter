@@ -32,7 +32,15 @@ class SettingScreen extends StatelessWidget {
               RowButtonWidget(
                 iconName: 'wallet',
                 title: 'My Wallets',
-                onTap: () {},
+                onTap: () {
+                  context.navigateTo(
+                    const SettingRoute(
+                      children: [
+                        MyWalletsRouter(),
+                      ],
+                    ),
+                  );
+                },
               ),
             ],
           ),
