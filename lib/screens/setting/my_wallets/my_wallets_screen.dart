@@ -30,12 +30,12 @@ class MyWalletsScreen extends StatelessWidget {
             child: Column(
               children: const [
                 WalletItemWidget(
-                  iconName: 'wallet',
+                  iconName: 'currency',
                   title: 'USD Wallet',
                   value: 'USD',
                 ),
                 WalletItemWidget(
-                  iconName: 'wallet',
+                  iconName: 'currency',
                   title: 'KHR Wallet',
                   value: 'RIEL',
                 ),

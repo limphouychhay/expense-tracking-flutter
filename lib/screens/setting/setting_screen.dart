@@ -48,7 +48,15 @@ class SettingScreen extends StatelessWidget {
         RowButtonWidget(
           iconName: 'categories',
           title: 'Categories',
-          onTap: () {},
+          onTap: () {
+            context.navigateTo(
+              const SettingRoute(
+                children: [
+                  CategoriesRouter(),
+                ],
+              ),
+            );
+          },
         ),
         RowButtonWidget(
           iconName: 'langauge',
